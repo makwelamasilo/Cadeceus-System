@@ -73,6 +73,7 @@
             // 
             // btnSettings
             // 
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,7 +103,6 @@
             this.toolTip1.SetToolTip(this.btnRegister, "Register");
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-//            this.btnRegister.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
             // btnInfo
             // 
@@ -118,7 +118,6 @@
             this.toolTip1.SetToolTip(this.btnInfo, "Information");
             this.btnInfo.UseVisualStyleBackColor = true;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            //this.btnInfo.MouseHover += new System.EventHandler(this.button4_MouseHover);
             // 
             // btnLogin
             // 
@@ -135,7 +134,6 @@
             this.toolTip1.SetToolTip(this.btnLogin, "Login");
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            //this.btnLogin.MouseHover += new System.EventHandler(this.button3_MouseHover);
             // 
             // button2
             // 
@@ -198,6 +196,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

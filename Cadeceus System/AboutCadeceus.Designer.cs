@@ -102,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(901, 448);
             this.Controls.Add(this.AboutPreview);
             this.Controls.Add(this.button7);
@@ -109,6 +110,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutCadeceus";
             this.Text = "AboutCadeceus";
             this.Load += new System.EventHandler(this.AboutCadeceus_Load);

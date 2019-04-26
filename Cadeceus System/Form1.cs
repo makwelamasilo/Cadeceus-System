@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         public Form1()
         {
+            this.Refresh();
             Thread t = new Thread(new ThreadStart(SplashStart));
             t.Start();
             Thread.Sleep(5000);
