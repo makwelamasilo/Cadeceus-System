@@ -25,10 +25,12 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAbout_Click(object sender, EventArgs e)
         {
-            
-            System.Diagnostics.Process.Start("Code exicutioners.pdf");
+            AboutCadeceus about = new AboutCadeceus();
+            about.Visible = true;
+            this.Close();
+            //System.Diagnostics.Process.Start("Code exicutioners.pdf");
         }
 
         private void button3_Click(object sender, EventArgs e)

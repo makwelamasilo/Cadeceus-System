@@ -33,29 +33,10 @@ namespace WindowsFormsApplication1
             {
                 Application.Exit();
             }
-        }
-
-        private void button3_MouseHover(object sender, EventArgs e)
-        {
             
         }
 
-        private void button5_MouseHover(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button6_MouseHover(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button4_MouseHover(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button7_Click(object sender, EventArgs e)
+        private void btnSettings_Click(object sender, EventArgs e)
         {
             Settings sttgs = new Settings();
             sttgs.ShowDialog();
@@ -67,21 +48,21 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             Log_In openForm = new Log_In();
             openForm.ShowDialog();
             Visible = false;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)
         {
             Info infoform = new Info();
             infoform.ShowDialog();
             this.Visible = false;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             AdminLogForReg rg = new AdminLogForReg();
             rg.ShowDialog();

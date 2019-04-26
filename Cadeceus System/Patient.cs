@@ -22,5 +22,20 @@ namespace WindowsFormsApplication1
             if (MessageBox.Show("Do you wish to exit the program?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void btnViewBill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

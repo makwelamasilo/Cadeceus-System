@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnViewBill = new System.Windows.Forms.Button();
+            this.txtBill = new System.Windows.Forms.RichTextBox();
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.btnPrintBill = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,68 +74,71 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnViewBill
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 80);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 49);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "&View Bill";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnViewBill.FlatAppearance.BorderSize = 0;
+            this.btnViewBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBill.Image = ((System.Drawing.Image)(resources.GetObject("btnViewBill.Image")));
+            this.btnViewBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewBill.Location = new System.Drawing.Point(12, 80);
+            this.btnViewBill.Name = "btnViewBill";
+            this.btnViewBill.Size = new System.Drawing.Size(131, 49);
+            this.btnViewBill.TabIndex = 4;
+            this.btnViewBill.Text = "&View Bill";
+            this.btnViewBill.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnViewBill.UseVisualStyleBackColor = true;
+            this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
             // 
-            // richTextBox1
+            // txtBill
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(499, 80);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(406, 395);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.txtBill.Location = new System.Drawing.Point(499, 80);
+            this.txtBill.Name = "txtBill";
+            this.txtBill.Size = new System.Drawing.Size(406, 395);
+            this.txtBill.TabIndex = 6;
+            this.txtBill.Text = "";
             // 
-            // button4
+            // btnEmail
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 190);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 49);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "&Email";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.Image = ((System.Drawing.Image)(resources.GetObject("btnEmail.Image")));
+            this.btnEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmail.Location = new System.Drawing.Point(12, 190);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(131, 49);
+            this.btnEmail.TabIndex = 7;
+            this.btnEmail.Text = "&Email";
+            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEmail.UseVisualStyleBackColor = true;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
-            // button5
+            // btnPrintBill
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 135);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 49);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "&Print Bill";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPrintBill.FlatAppearance.BorderSize = 0;
+            this.btnPrintBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintBill.Image")));
+            this.btnPrintBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintBill.Location = new System.Drawing.Point(12, 135);
+            this.btnPrintBill.Name = "btnPrintBill";
+            this.btnPrintBill.Size = new System.Drawing.Size(131, 49);
+            this.btnPrintBill.TabIndex = 8;
+            this.btnPrintBill.Text = "&Print Bill";
+            this.btnPrintBill.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrintBill.UseVisualStyleBackColor = true;
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
             // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 487);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnPrintBill);
+            this.Controls.Add(this.btnEmail);
+            this.Controls.Add(this.txtBill);
+            this.Controls.Add(this.btnViewBill);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -153,9 +156,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnViewBill;
+        private System.Windows.Forms.RichTextBox txtBill;
+        private System.Windows.Forms.Button btnEmail;
+        private System.Windows.Forms.Button btnPrintBill;
     }
 }
