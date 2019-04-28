@@ -17,11 +17,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void axAcroPDF1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void AboutCadeceus_Load(object sender, EventArgs e)
         {
             AboutPreview.src = "C:\\Users\\User\\Documents\\Code exicutioners.pdf";
