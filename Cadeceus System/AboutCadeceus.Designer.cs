@@ -96,7 +96,7 @@
             this.AboutPreview.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AboutPreview.OcxState")));
             this.AboutPreview.Size = new System.Drawing.Size(851, 378);
             this.AboutPreview.TabIndex = 30;
-            this.AboutPreview.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
+//            this.AboutPreview.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // AboutCadeceus
             // 
