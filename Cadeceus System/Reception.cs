@@ -33,5 +33,20 @@ namespace WindowsFormsApplication1
         {
             tabPatientManagement.Text = "PATIENT\nMANAGEMENT";
         }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Log_In loginForm = new Log_In();
+            loginForm.Show();
+            this.Close();
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you wish to exit the program", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
