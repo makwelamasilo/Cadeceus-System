@@ -32,6 +32,7 @@ namespace WindowsFormsApplication1
         private void Reception_Load(object sender, EventArgs e)
         {
             tabPatientManagement.Text = "PATIENT\nMANAGEMENT";
+            btnHomeSelected.Visible = true;
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -43,9 +44,32 @@ namespace WindowsFormsApplication1
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
+            
             if (MessageBox.Show("Do you wish to exit the program", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void tabControlSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabReception.SelectedIndex == 0)
+            {
+                btnHomeSelected.Visible = true;
+                btnAppointmentSelected.Visible = false;
+                btnPatientsSelected.Visible = false;
+            }
+            if (tabReception.SelectedIndex == 1)
+            {
+                btnHomeSelected.Visible = false;
+                btnAppointmentSelected.Visible = true;
+                btnPatientsSelected.Visible = false;
+            }
+            if (tabReception.SelectedIndex == 2)
+            {
+                btnHomeSelected.Visible = false;
+                btnAppointmentSelected.Visible = false;
+                btnPatientsSelected.Visible = true;
             }
         }
     }

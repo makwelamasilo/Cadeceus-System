@@ -55,6 +55,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPatientsList = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnHomeSelected = new System.Windows.Forms.Panel();
+            this.btnAppointmentSelected = new System.Windows.Forms.Panel();
+            this.btnPatientsSelected = new System.Windows.Forms.Panel();
             this.tabReception.SuspendLayout();
             this.tabAppointment.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -124,6 +127,7 @@
             this.tabReception.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabReception.TabIndex = 30;
             this.tabReception.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabReception_DrawItem);
+            this.tabReception.SelectedIndexChanged += new System.EventHandler(this.tabControlSelection_SelectedIndexChanged);
             // 
             // tabHome
             // 
@@ -142,7 +146,7 @@
             this.tabAppointment.BackColor = System.Drawing.Color.Transparent;
             this.tabAppointment.Controls.Add(this.tabControl1);
             this.tabAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAppointment.ImageIndex = 1;
+            this.tabAppointment.ImageKey = "icons8-add-user-male-50.png";
             this.tabAppointment.Location = new System.Drawing.Point(124, 4);
             this.tabAppointment.Name = "tabAppointment";
             this.tabAppointment.Padding = new System.Windows.Forms.Padding(3);
@@ -365,11 +369,41 @@
             this.dataGridView1.Size = new System.Drawing.Size(728, 353);
             this.dataGridView1.TabIndex = 0;
             // 
+            // btnHomeSelected
+            // 
+            this.btnHomeSelected.BackColor = System.Drawing.Color.Black;
+            this.btnHomeSelected.Location = new System.Drawing.Point(3, 56);
+            this.btnHomeSelected.Name = "btnHomeSelected";
+            this.btnHomeSelected.Size = new System.Drawing.Size(10, 42);
+            this.btnHomeSelected.TabIndex = 0;
+            this.btnHomeSelected.Visible = false;
+            // 
+            // btnAppointmentSelected
+            // 
+            this.btnAppointmentSelected.BackColor = System.Drawing.Color.Black;
+            this.btnAppointmentSelected.Location = new System.Drawing.Point(3, 97);
+            this.btnAppointmentSelected.Name = "btnAppointmentSelected";
+            this.btnAppointmentSelected.Size = new System.Drawing.Size(10, 42);
+            this.btnAppointmentSelected.TabIndex = 1;
+            this.btnAppointmentSelected.Visible = false;
+            // 
+            // btnPatientsSelected
+            // 
+            this.btnPatientsSelected.BackColor = System.Drawing.Color.Black;
+            this.btnPatientsSelected.Location = new System.Drawing.Point(3, 136);
+            this.btnPatientsSelected.Name = "btnPatientsSelected";
+            this.btnPatientsSelected.Size = new System.Drawing.Size(10, 42);
+            this.btnPatientsSelected.TabIndex = 2;
+            this.btnPatientsSelected.Visible = false;
+            // 
             // Reception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 487);
+            this.Controls.Add(this.btnPatientsSelected);
+            this.Controls.Add(this.btnAppointmentSelected);
+            this.Controls.Add(this.btnHomeSelected);
             this.Controls.Add(this.tabReception);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBack);
@@ -421,5 +455,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel btnHomeSelected;
+        private System.Windows.Forms.Panel btnAppointmentSelected;
+        private System.Windows.Forms.Panel btnPatientsSelected;
     }
 }

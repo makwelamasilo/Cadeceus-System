@@ -12,12 +12,12 @@ namespace WindowsFormsApplication1
 {
     public partial class Settings : Form
     {
-        int fontSize = 0;
+        //int fontSize = 0;
         public Settings()
         {
             InitializeComponent();
         }
-
+        Color color;
         private void button2_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you wish to exit the program", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -56,41 +56,20 @@ namespace WindowsFormsApplication1
 
         private void btnApplyChanges_Click(object sender, EventArgs e)
         {
-            Color darkTheme = Color.DimGray;
-            
-            Color light = Color.AntiqueWhite;
             if (radDark.Checked)
             {
-                
-                AboutCadeceus about = new AboutCadeceus();
-                Admin admin = new Admin();
-                AdminLogForReg reg = new AdminLogForReg();
-                Clerk cleck = new Clerk();
-                ContinueReg cont = new ContinueReg();
-                Database data = new Database();
-                Doctor doc = new Doctor();
-                Form1 home = new Form1();
+                color = Color.FromArgb(41, 44, 51);
                 Settings setting = new Settings();
-                Info info = new Info();
-                Log_In login = new Log_In();
-                Nurse nurse = new Nurse();
-                Patient pat = new Patient();
-                Register register = new Register();
-
-                setting.BackColor = darkTheme;
-                about.BackColor = darkTheme;
-                admin.BackColor = darkTheme;
-                reg.BackColor = darkTheme;
-                cleck.BackColor = darkTheme;
-                cont.BackColor = darkTheme;
-                data.BackColor = darkTheme;
-                doc.BackColor = darkTheme;
-                home.BackColor = darkTheme;
-                info.BackColor = darkTheme;
-                login.BackColor = darkTheme;
-                nurse.BackColor = darkTheme;
-                pat.BackColor = darkTheme;
-                register.BackColor = darkTheme;
+                Form1 home = new Form1();
+                home.BackColor = color;
+                setting.BackColor = color;
+                setting.Show();
+            }
+            if (radLight.Checked)
+            {
+                color = Color.WhiteSmoke;
+                Settings setting = new Settings();
+                setting.BackColor = color;
                 setting.Show();
             }
         }
