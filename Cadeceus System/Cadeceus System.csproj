@@ -77,11 +77,29 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reception.cs">
+    <Compile Include="AppointmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppointmentControl.Designer.cs">
+      <DependentUpon>AppointmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reception.Designer.cs">
-      <DependentUpon>Reception.cs</DependentUpon>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashControl.Designer.cs">
+      <DependentUpon>DashControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatienctsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatienctsControl.Designer.cs">
+      <DependentUpon>PatienctsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminLogForReg.cs">
       <SubType>Form</SubType>
@@ -174,8 +192,17 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reception.resx">
-      <DependentUpon>Reception.cs</DependentUpon>
+    <EmbeddedResource Include="AppointmentControl.resx">
+      <DependentUpon>AppointmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashControl.resx">
+      <DependentUpon>DashControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatienctsControl.resx">
+      <DependentUpon>PatienctsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminLogForReg.resx">
       <DependentUpon>AdminLogForReg.cs</DependentUpon>

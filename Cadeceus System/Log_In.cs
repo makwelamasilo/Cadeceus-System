@@ -39,9 +39,12 @@ namespace WindowsFormsApplication1
             username = txtUsername.Text;
             password = txtPassword.Text;
 
-            Reception reception = new Reception();
-            reception.Show();
+            Dashboard dash = new Dashboard();
+            dash.ShowDialog();
             this.Close();
+            /*Reception reception = new Reception();
+            reception.Show();
+            this.Close();*/
         }
     }
 }
