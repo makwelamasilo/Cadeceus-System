@@ -77,11 +77,23 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdmissionDischargeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdmissionDischargeControl.Designer.cs">
+      <DependentUpon>AdmissionDischargeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppointmentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AppointmentControl.Designer.cs">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BillControl.Designer.cs">
+      <DependentUpon>BillControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -192,8 +204,14 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdmissionDischargeControl.resx">
+      <DependentUpon>AdmissionDischargeControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppointmentControl.resx">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillControl.resx">
+      <DependentUpon>BillControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

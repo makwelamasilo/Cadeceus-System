@@ -48,10 +48,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnAdmissions = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,7 +108,7 @@
             this.btnPatientsManagement.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnPatientsManagement.Size = new System.Drawing.Size(192, 60);
             this.btnPatientsManagement.TabIndex = 2;
-            this.btnPatientsManagement.Text = "   Patients Management";
+            this.btnPatientsManagement.Text = "     Patients Management";
             this.btnPatientsManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPatientsManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPatientsManagement.UseVisualStyleBackColor = false;
@@ -153,6 +154,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.labelTime);
@@ -280,16 +282,17 @@
             // 
             // btnClose
             // 
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(791, 0);
+            this.btnClose.Location = new System.Drawing.Point(788, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(44, 48);
+            this.btnClose.Size = new System.Drawing.Size(47, 48);
             this.btnClose.TabIndex = 2;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -297,6 +300,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -305,11 +309,24 @@
             this.panel4.Size = new System.Drawing.Size(835, 48);
             this.panel4.TabIndex = 3;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Algerian", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label3.Location = new System.Drawing.Point(6, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(462, 32);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Hospital Management System";
+            // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLeft.BackgroundImage")));
             this.panelLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLeft.Controls.Add(this.btnAdmissions);
             this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btnBill);
             this.panelLeft.Controls.Add(this.btnPatientsManagement);
@@ -330,17 +347,22 @@
             // 
             this.timerTime.Tick += new System.EventHandler(this.TimerTime_Tick);
             // 
-            // label3
+            // btnAdmissions
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Algerian", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(6, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(462, 32);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Hospital Management System";
+            this.btnAdmissions.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmissions.FlatAppearance.BorderSize = 0;
+            this.btnAdmissions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmissions.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmissions.ForeColor = System.Drawing.Color.White;
+            this.btnAdmissions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmissions.Image")));
+            this.btnAdmissions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmissions.Location = new System.Drawing.Point(12, 402);
+            this.btnAdmissions.Name = "btnAdmissions";
+            this.btnAdmissions.Size = new System.Drawing.Size(203, 60);
+            this.btnAdmissions.TabIndex = 3;
+            this.btnAdmissions.Text = "           Admissions and Discharges";
+            this.btnAdmissions.UseVisualStyleBackColor = false;
+            this.btnAdmissions.Click += new System.EventHandler(this.BtnAdmissions_Click);
             // 
             // Dashboard
             // 
@@ -352,7 +374,9 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -390,5 +414,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAdmissions;
     }
 }

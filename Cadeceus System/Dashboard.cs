@@ -103,7 +103,16 @@ namespace WindowsFormsApplication1
 
         private void BtnBill_Click(object sender, EventArgs e)
         {
+            moveSidePanel(btnBill);
+            BillControl bill = new BillControl();
+            AddControlsToPanel(bill);
+        }
 
+        private void BtnAdmissions_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnAdmissions);
+            AdmissionDischargeControl admissionDischarge = new AdmissionDischargeControl();
+            AddControlsToPanel(admissionDischarge);
         }
     }
 }

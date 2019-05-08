@@ -37,9 +37,9 @@
             // progressBar1
             // 
             this.progressBar1.BackColor = System.Drawing.SystemColors.Control;
-            this.progressBar1.Location = new System.Drawing.Point(-1, 304);
+            this.progressBar1.Location = new System.Drawing.Point(138, 214);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(560, 11);
+            this.progressBar1.Size = new System.Drawing.Size(273, 11);
             this.progressBar1.TabIndex = 0;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
