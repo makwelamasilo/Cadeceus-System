@@ -40,8 +40,8 @@ namespace WindowsFormsApplication1
         private void btnSettings_Click(object sender, EventArgs e)
         {
             Settings sttgs = new Settings();
+            this.Hide();
             sttgs.ShowDialog();
-            this.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,22 +52,22 @@ namespace WindowsFormsApplication1
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Log_In openForm = new Log_In();
+            this.Hide();
             openForm.ShowDialog();
-            Visible = false;
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
             Info infoform = new Info();
+            this.Hide();
             infoform.ShowDialog();
-            this.Visible = false;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            AdminLogForReg rg = new AdminLogForReg();
-            rg.ShowDialog();
-            this.Visible = false;
+            /*AdminLogForReg rg = new AdminLogForReg();
+            this.Hide();
+            rg.ShowDialog();*/
         }
     }
 }

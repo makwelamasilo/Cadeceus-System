@@ -30,8 +30,8 @@ namespace WindowsFormsApplication1
         private void btnBack_Click(object sender, EventArgs e)
         {
             Form1 frm = new Form1();
+            this.Hide();
             frm.Visible = true;
-            this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -40,11 +40,8 @@ namespace WindowsFormsApplication1
             password = txtPassword.Text;
 
             Dashboard dash = new Dashboard();
+            this.Hide();
             dash.ShowDialog();
-            this.Close();
-            /*Reception reception = new Reception();
-            reception.Show();
-            this.Close();*/
         }
     }
 }

@@ -39,8 +39,8 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label2 = new System.Windows.Forms.Label();
             this.groupThemes = new System.Windows.Forms.GroupBox();
-            this.radLight = new System.Windows.Forms.RadioButton();
             this.radDark = new System.Windows.Forms.RadioButton();
+            this.radLight = new System.Windows.Forms.RadioButton();
             this.comboFontSizes = new System.Windows.Forms.ComboBox();
             this.groupThemes.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-70, 9);
             this.label1.Name = "label1";
@@ -58,6 +59,7 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,36 +70,43 @@
             this.button7.Size = new System.Drawing.Size(58, 52);
             this.button7.TabIndex = 8;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(886, 0);
+            this.btnClose.Location = new System.Drawing.Point(875, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 32);
+            this.btnClose.Size = new System.Drawing.Size(42, 42);
             this.btnClose.TabIndex = 9;
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(849, 0);
+            this.btnBack.Location = new System.Drawing.Point(834, 0);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(31, 32);
+            this.btnBack.Size = new System.Drawing.Size(41, 42);
             this.btnBack.TabIndex = 10;
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,11 +115,12 @@
             this.button1.Size = new System.Drawing.Size(157, 38);
             this.button1.TabIndex = 13;
             this.button1.Text = "&Apply Changes";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnApplyChanges_Click);
             // 
             // btnSetFont
             // 
+            this.btnSetFont.BackColor = System.Drawing.Color.Transparent;
             this.btnSetFont.FlatAppearance.BorderSize = 0;
             this.btnSetFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetFont.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,11 +132,12 @@
             this.btnSetFont.TabIndex = 15;
             this.btnSetFont.Text = "&Set Font";
             this.btnSetFont.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSetFont.UseVisualStyleBackColor = true;
+            this.btnSetFont.UseVisualStyleBackColor = false;
             this.btnSetFont.Click += new System.EventHandler(this.BtnSetFont_Click);
             // 
             // btnSetTheme
             // 
+            this.btnSetTheme.BackColor = System.Drawing.Color.Transparent;
             this.btnSetTheme.FlatAppearance.BorderSize = 0;
             this.btnSetTheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetTheme.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,12 +149,13 @@
             this.btnSetTheme.TabIndex = 16;
             this.btnSetTheme.Text = "&Set Theme";
             this.btnSetTheme.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSetTheme.UseVisualStyleBackColor = true;
+            this.btnSetTheme.UseVisualStyleBackColor = false;
             this.btnSetTheme.Click += new System.EventHandler(this.button5_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(216, 447);
@@ -155,6 +167,7 @@
             // 
             // groupThemes
             // 
+            this.groupThemes.BackColor = System.Drawing.Color.Transparent;
             this.groupThemes.Controls.Add(this.radDark);
             this.groupThemes.Controls.Add(this.radLight);
             this.groupThemes.Location = new System.Drawing.Point(209, 139);
@@ -165,29 +178,31 @@
             this.groupThemes.Text = "Select theme";
             this.groupThemes.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // radLight
-            // 
-            this.radLight.AutoSize = true;
-            this.radLight.Location = new System.Drawing.Point(6, 19);
-            this.radLight.Name = "radLight";
-            this.radLight.Size = new System.Drawing.Size(84, 17);
-            this.radLight.TabIndex = 0;
-            this.radLight.TabStop = true;
-            this.radLight.Text = "Light Theme";
-            this.radLight.UseVisualStyleBackColor = true;
-            this.radLight.CheckedChanged += new System.EventHandler(this.radTheme_CheckedChanged);
-            // 
             // radDark
             // 
             this.radDark.AutoSize = true;
+            this.radDark.BackColor = System.Drawing.Color.Transparent;
             this.radDark.Location = new System.Drawing.Point(133, 19);
             this.radDark.Name = "radDark";
             this.radDark.Size = new System.Drawing.Size(84, 17);
             this.radDark.TabIndex = 1;
             this.radDark.TabStop = true;
             this.radDark.Text = "Dark Theme";
-            this.radDark.UseVisualStyleBackColor = true;
+            this.radDark.UseVisualStyleBackColor = false;
             this.radDark.CheckedChanged += new System.EventHandler(this.radTheme_CheckedChanged);
+            // 
+            // radLight
+            // 
+            this.radLight.AutoSize = true;
+            this.radLight.BackColor = System.Drawing.Color.Transparent;
+            this.radLight.Location = new System.Drawing.Point(6, 19);
+            this.radLight.Name = "radLight";
+            this.radLight.Size = new System.Drawing.Size(84, 17);
+            this.radLight.TabIndex = 0;
+            this.radLight.TabStop = true;
+            this.radLight.Text = "Light Theme";
+            this.radLight.UseVisualStyleBackColor = false;
+            this.radLight.CheckedChanged += new System.EventHandler(this.radTheme_CheckedChanged);
             // 
             // comboFontSizes
             // 
@@ -209,6 +224,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(917, 487);
             this.Controls.Add(this.comboFontSizes);
             this.Controls.Add(this.groupThemes);

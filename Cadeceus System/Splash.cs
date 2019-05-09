@@ -31,5 +31,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void Splash_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

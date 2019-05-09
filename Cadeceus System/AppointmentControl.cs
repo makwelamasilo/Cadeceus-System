@@ -41,5 +41,15 @@ namespace WindowsFormsApplication1
                 panelTodaysAppointments.Visible = true;
             }
         }
+
+        private void AppointmentControl_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPatientID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

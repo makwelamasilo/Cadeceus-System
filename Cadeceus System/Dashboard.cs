@@ -111,8 +111,8 @@ namespace WindowsFormsApplication1
         private void BtnAdmissions_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAdmissions);
-            AdmissionDischargeControl admissionDischarge = new AdmissionDischargeControl();
-            AddControlsToPanel(admissionDischarge);
+            EmployeesControl employees = new EmployeesControl();
+            AddControlsToPanel(employees);
         }
     }
 }
