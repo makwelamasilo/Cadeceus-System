@@ -32,7 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesControl));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAddEmployee = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabRemoveEmployee = new System.Windows.Forms.TabPage();
+            this.tabUpdate = new System.Windows.Forms.TabPage();
+            this.tabViewEmployees = new System.Windows.Forms.TabPage();
+            this.dataViewDoctorBy = new System.Windows.Forms.DataGridView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupDocType = new System.Windows.Forms.GroupBox();
             this.radResident = new System.Windows.Forms.RadioButton();
             this.radOnCall = new System.Windows.Forms.RadioButton();
@@ -42,6 +46,8 @@
             this.radNurse = new System.Windows.Forms.RadioButton();
             this.radDoc = new System.Windows.Forms.RadioButton();
             this.panelRegForm = new System.Windows.Forms.Panel();
+            this.txtFees = new System.Windows.Forms.MaskedTextBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblFees = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
@@ -57,21 +63,13 @@
             this.txtFNames = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabRemoveEmployee = new System.Windows.Forms.TabPage();
-            this.tabUpdate = new System.Windows.Forms.TabPage();
-            this.tabViewEmployees = new System.Windows.Forms.TabPage();
-            this.dataViewDoctorBy = new System.Windows.Forms.DataGridView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.txtFees = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1.SuspendLayout();
             this.tabAddEmployee.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tabViewEmployees.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataViewDoctorBy)).BeginInit();
             this.groupDocType.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelRegForm.SuspendLayout();
-            this.tabViewEmployees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataViewDoctorBy)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -82,36 +80,81 @@
             this.tabControl1.Controls.Add(this.tabUpdate);
             this.tabControl1.Controls.Add(this.tabViewEmployees);
             this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.Location = new System.Drawing.Point(0, 22);
+            this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(866, 428);
+            this.tabControl1.Size = new System.Drawing.Size(866, 447);
             this.tabControl1.TabIndex = 0;
             // 
             // tabAddEmployee
             // 
             this.tabAddEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabAddEmployee.BackgroundImage")));
             this.tabAddEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAddEmployee.Controls.Add(this.panel1);
+            this.tabAddEmployee.Controls.Add(this.groupDocType);
+            this.tabAddEmployee.Controls.Add(this.groupBox1);
+            this.tabAddEmployee.Controls.Add(this.panelRegForm);
             this.tabAddEmployee.ImageIndex = 2;
             this.tabAddEmployee.Location = new System.Drawing.Point(4, 26);
             this.tabAddEmployee.Name = "tabAddEmployee";
             this.tabAddEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddEmployee.Size = new System.Drawing.Size(858, 398);
+            this.tabAddEmployee.Size = new System.Drawing.Size(858, 417);
             this.tabAddEmployee.TabIndex = 0;
             this.tabAddEmployee.Text = "Add Employee";
             this.tabAddEmployee.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // tabRemoveEmployee
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.groupDocType);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.panelRegForm);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 418);
-            this.panel1.TabIndex = 0;
+            this.tabRemoveEmployee.ImageIndex = 1;
+            this.tabRemoveEmployee.Location = new System.Drawing.Point(4, 26);
+            this.tabRemoveEmployee.Name = "tabRemoveEmployee";
+            this.tabRemoveEmployee.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRemoveEmployee.Size = new System.Drawing.Size(858, 398);
+            this.tabRemoveEmployee.TabIndex = 1;
+            this.tabRemoveEmployee.Text = "Remove Employee";
+            this.tabRemoveEmployee.UseVisualStyleBackColor = true;
+            // 
+            // tabUpdate
+            // 
+            this.tabUpdate.ImageIndex = 3;
+            this.tabUpdate.Location = new System.Drawing.Point(4, 26);
+            this.tabUpdate.Name = "tabUpdate";
+            this.tabUpdate.Size = new System.Drawing.Size(858, 398);
+            this.tabUpdate.TabIndex = 2;
+            this.tabUpdate.Text = "Update Employee Details";
+            this.tabUpdate.UseVisualStyleBackColor = true;
+            // 
+            // tabViewEmployees
+            // 
+            this.tabViewEmployees.Controls.Add(this.dataViewDoctorBy);
+            this.tabViewEmployees.ImageIndex = 0;
+            this.tabViewEmployees.Location = new System.Drawing.Point(4, 26);
+            this.tabViewEmployees.Name = "tabViewEmployees";
+            this.tabViewEmployees.Padding = new System.Windows.Forms.Padding(3);
+            this.tabViewEmployees.Size = new System.Drawing.Size(858, 398);
+            this.tabViewEmployees.TabIndex = 3;
+            this.tabViewEmployees.Text = "View Employee";
+            this.tabViewEmployees.UseVisualStyleBackColor = true;
+            // 
+            // dataViewDoctorBy
+            // 
+            this.dataViewDoctorBy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataViewDoctorBy.Location = new System.Drawing.Point(6, 6);
+            this.dataViewDoctorBy.Name = "dataViewDoctorBy";
+            this.dataViewDoctorBy.Size = new System.Drawing.Size(846, 386);
+            this.dataViewDoctorBy.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-database-view-filled-50.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-minus-filled-50.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-plus-filled-50.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-update-filled-50.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-businessman-filled-500.png");
+            this.imageList1.Images.SetKeyName(5, "icons8-front-desk-filled-50 (1).png");
+            this.imageList1.Images.SetKeyName(6, "icons8-medical-doctor-filled-100.png");
+            this.imageList1.Images.SetKeyName(7, "icons8-nurse-filled-100.png");
             // 
             // groupDocType
             // 
@@ -119,10 +162,10 @@
             this.groupDocType.Controls.Add(this.radResident);
             this.groupDocType.Controls.Add(this.radOnCall);
             this.groupDocType.ForeColor = System.Drawing.Color.White;
-            this.groupDocType.Location = new System.Drawing.Point(218, 51);
+            this.groupDocType.Location = new System.Drawing.Point(227, 51);
             this.groupDocType.Name = "groupDocType";
-            this.groupDocType.Size = new System.Drawing.Size(326, 35);
-            this.groupDocType.TabIndex = 2;
+            this.groupDocType.Size = new System.Drawing.Size(405, 35);
+            this.groupDocType.TabIndex = 5;
             this.groupDocType.TabStop = false;
             this.groupDocType.Text = "Select Type of Doctor";
             this.groupDocType.Visible = false;
@@ -152,7 +195,6 @@
             this.radOnCall.TabStop = true;
             this.radOnCall.Text = "On-Call Doctor";
             this.radOnCall.UseVisualStyleBackColor = false;
-            this.radOnCall.CheckedChanged += new System.EventHandler(this.DocType_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -163,10 +205,10 @@
             this.groupBox1.Controls.Add(this.radDoc);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(218, 6);
+            this.groupBox1.Location = new System.Drawing.Point(227, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(405, 42);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Employee Type";
             // 
@@ -225,11 +267,10 @@
             this.radDoc.TabStop = true;
             this.radDoc.Text = "Doctor";
             this.radDoc.UseVisualStyleBackColor = false;
-            this.radDoc.CheckedChanged += new System.EventHandler(this.EmployeeType_CheckedChanged);
             // 
             // panelRegForm
             // 
-            this.panelRegForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelRegForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelRegForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelRegForm.Controls.Add(this.txtFees);
             this.panelRegForm.Controls.Add(this.cmbDepartment);
@@ -248,27 +289,61 @@
             this.panelRegForm.Controls.Add(this.txtFNames);
             this.panelRegForm.Controls.Add(this.label4);
             this.panelRegForm.Controls.Add(this.label3);
-            this.panelRegForm.Location = new System.Drawing.Point(218, 94);
+            this.panelRegForm.Location = new System.Drawing.Point(227, 94);
             this.panelRegForm.Name = "panelRegForm";
-            this.panelRegForm.Size = new System.Drawing.Size(405, 317);
-            this.panelRegForm.TabIndex = 0;
+            this.panelRegForm.Size = new System.Drawing.Size(405, 307);
+            this.panelRegForm.TabIndex = 3;
             this.panelRegForm.Visible = false;
+            // 
+            // txtFees
+            // 
+            this.txtFees.Location = new System.Drawing.Point(218, 203);
+            this.txtFees.Mask = "R000000.00";
+            this.txtFees.Name = "txtFees";
+            this.txtFees.Size = new System.Drawing.Size(130, 20);
+            this.txtFees.TabIndex = 34;
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Items.AddRange(new object[] {
+            "Anaesthetics",
+            "Bloodbank",
+            "Cardiology",
+            "Dental",
+            "Emergency",
+            "Gynaecology",
+            "Intensivecareunit(ICU)",
+            "Laboratory",
+            "Morgue",
+            "MRI",
+            "Neurology",
+            "Oncology",
+            "OperationTheatre",
+            "Orthopaedic",
+            "Out-patient",
+            "Pathology"});
+            this.cmbDepartment.Location = new System.Drawing.Point(218, 173);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(130, 21);
+            this.cmbDepartment.Sorted = true;
+            this.cmbDepartment.TabIndex = 29;
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnRegister.Image")));
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegister.Location = new System.Drawing.Point(132, 238);
+            this.btnRegister.Location = new System.Drawing.Point(142, 231);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(142, 59);
             this.btnRegister.TabIndex = 33;
             this.btnRegister.Text = "          Register";
             this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // lblFees
             // 
@@ -411,94 +486,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "First Names:";
             // 
-            // tabRemoveEmployee
-            // 
-            this.tabRemoveEmployee.ImageIndex = 1;
-            this.tabRemoveEmployee.Location = new System.Drawing.Point(4, 26);
-            this.tabRemoveEmployee.Name = "tabRemoveEmployee";
-            this.tabRemoveEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRemoveEmployee.Size = new System.Drawing.Size(858, 398);
-            this.tabRemoveEmployee.TabIndex = 1;
-            this.tabRemoveEmployee.Text = "Remove Employee";
-            this.tabRemoveEmployee.UseVisualStyleBackColor = true;
-            // 
-            // tabUpdate
-            // 
-            this.tabUpdate.ImageIndex = 3;
-            this.tabUpdate.Location = new System.Drawing.Point(4, 26);
-            this.tabUpdate.Name = "tabUpdate";
-            this.tabUpdate.Size = new System.Drawing.Size(858, 398);
-            this.tabUpdate.TabIndex = 2;
-            this.tabUpdate.Text = "Update Employee Details";
-            this.tabUpdate.UseVisualStyleBackColor = true;
-            // 
-            // tabViewEmployees
-            // 
-            this.tabViewEmployees.Controls.Add(this.dataViewDoctorBy);
-            this.tabViewEmployees.ImageIndex = 0;
-            this.tabViewEmployees.Location = new System.Drawing.Point(4, 26);
-            this.tabViewEmployees.Name = "tabViewEmployees";
-            this.tabViewEmployees.Padding = new System.Windows.Forms.Padding(3);
-            this.tabViewEmployees.Size = new System.Drawing.Size(858, 398);
-            this.tabViewEmployees.TabIndex = 3;
-            this.tabViewEmployees.Text = "View Employee";
-            this.tabViewEmployees.UseVisualStyleBackColor = true;
-            // 
-            // dataViewDoctorBy
-            // 
-            this.dataViewDoctorBy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataViewDoctorBy.Location = new System.Drawing.Point(6, 6);
-            this.dataViewDoctorBy.Name = "dataViewDoctorBy";
-            this.dataViewDoctorBy.Size = new System.Drawing.Size(846, 386);
-            this.dataViewDoctorBy.TabIndex = 0;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-database-view-filled-50.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-minus-filled-50.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-plus-filled-50.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-update-filled-50.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-businessman-filled-500.png");
-            this.imageList1.Images.SetKeyName(5, "icons8-front-desk-filled-50 (1).png");
-            this.imageList1.Images.SetKeyName(6, "icons8-medical-doctor-filled-100.png");
-            this.imageList1.Images.SetKeyName(7, "icons8-nurse-filled-100.png");
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Items.AddRange(new object[] {
-            "Anaesthetics",
-            "Bloodbank",
-            "Cardiology",
-            "Dental",
-            "Emergency",
-            "Gynaecology",
-            "Intensivecareunit(ICU)",
-            "Laboratory",
-            "Morgue",
-            "MRI",
-            "Neurology",
-            "Oncology",
-            "OperationTheatre",
-            "Orthopaedic",
-            "Out-patient",
-            "Pathology"});
-            this.cmbDepartment.Location = new System.Drawing.Point(218, 173);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(130, 21);
-            this.cmbDepartment.Sorted = true;
-            this.cmbDepartment.TabIndex = 29;
-            // 
-            // txtFees
-            // 
-            this.txtFees.Location = new System.Drawing.Point(218, 203);
-            this.txtFees.Mask = "R000000.00";
-            this.txtFees.Name = "txtFees";
-            this.txtFees.Size = new System.Drawing.Size(130, 20);
-            this.txtFees.TabIndex = 34;
-            // 
             // EmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,19 +493,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.tabControl1);
             this.Name = "EmployeesControl";
-            this.Size = new System.Drawing.Size(869, 450);
+            this.Size = new System.Drawing.Size(869, 452);
             this.Load += new System.EventHandler(this.EmployeesControl_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabAddEmployee.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.tabViewEmployees.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataViewDoctorBy)).EndInit();
             this.groupDocType.ResumeLayout(false);
             this.groupDocType.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panelRegForm.ResumeLayout(false);
             this.panelRegForm.PerformLayout();
-            this.tabViewEmployees.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataViewDoctorBy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,8 +517,21 @@
         private System.Windows.Forms.TabPage tabUpdate;
         private System.Windows.Forms.TabPage tabViewEmployees;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataViewDoctorBy;
+        private System.Windows.Forms.GroupBox groupDocType;
+        private System.Windows.Forms.RadioButton radResident;
+        private System.Windows.Forms.RadioButton radOnCall;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radReceptionist;
+        private System.Windows.Forms.RadioButton radAdmin;
+        private System.Windows.Forms.RadioButton radNurse;
+        private System.Windows.Forms.RadioButton radDoc;
         private System.Windows.Forms.Panel panelRegForm;
+        private System.Windows.Forms.MaskedTextBox txtFees;
+        private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label lblFees;
+        private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.MaskedTextBox txtCode;
         private System.Windows.Forms.TextBox txtStreet;
         private System.Windows.Forms.Label label9;
@@ -545,19 +544,5 @@
         private System.Windows.Forms.TextBox txtFNames;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radReceptionist;
-        private System.Windows.Forms.RadioButton radAdmin;
-        private System.Windows.Forms.RadioButton radNurse;
-        private System.Windows.Forms.RadioButton radDoc;
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label lblFees;
-        private System.Windows.Forms.Label lblDepartment;
-        private System.Windows.Forms.GroupBox groupDocType;
-        private System.Windows.Forms.RadioButton radResident;
-        private System.Windows.Forms.RadioButton radOnCall;
-        private System.Windows.Forms.DataGridView dataViewDoctorBy;
-        private System.Windows.Forms.ComboBox cmbDepartment;
-        private System.Windows.Forms.MaskedTextBox txtFees;
     }
 }
