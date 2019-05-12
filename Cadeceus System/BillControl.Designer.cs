@@ -46,6 +46,7 @@
             this.btnPrintBill.FlatAppearance.BorderSize = 0;
             this.btnPrintBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.ForeColor = System.Drawing.Color.White;
             this.btnPrintBill.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintBill.Image")));
             this.btnPrintBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrintBill.Location = new System.Drawing.Point(14, 192);
@@ -62,6 +63,7 @@
             this.btnEmail.FlatAppearance.BorderSize = 0;
             this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.White;
             this.btnEmail.Image = ((System.Drawing.Image)(resources.GetObject("btnEmail.Image")));
             this.btnEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmail.Location = new System.Drawing.Point(14, 261);
@@ -74,6 +76,7 @@
             // 
             // txtBill
             // 
+            this.txtBill.BackColor = System.Drawing.SystemColors.Window;
             this.txtBill.Location = new System.Drawing.Point(381, 13);
             this.txtBill.Name = "txtBill";
             this.txtBill.Size = new System.Drawing.Size(406, 439);
@@ -86,6 +89,7 @@
             this.btnViewBill.FlatAppearance.BorderSize = 0;
             this.btnViewBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBill.ForeColor = System.Drawing.Color.White;
             this.btnViewBill.Image = ((System.Drawing.Image)(resources.GetObject("btnViewBill.Image")));
             this.btnViewBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewBill.Location = new System.Drawing.Point(14, 125);
@@ -101,6 +105,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(36, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 18);
@@ -119,6 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(36, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 18);
@@ -130,6 +136,7 @@
             this.lblPatientNames.AutoSize = true;
             this.lblPatientNames.BackColor = System.Drawing.Color.Transparent;
             this.lblPatientNames.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPatientNames.ForeColor = System.Drawing.Color.White;
             this.lblPatientNames.Location = new System.Drawing.Point(196, 81);
             this.lblPatientNames.Name = "lblPatientNames";
             this.lblPatientNames.Size = new System.Drawing.Size(62, 19);

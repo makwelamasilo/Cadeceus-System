@@ -12,8 +12,10 @@ namespace WindowsFormsApplication1
 {
     public partial class EmployeesControl : UserControl
     {
-        public EmployeesControl()
+        string user;
+        public EmployeesControl(string username)
         {
+            user = username;
             InitializeComponent();
         }
 
@@ -32,7 +34,7 @@ namespace WindowsFormsApplication1
                 lblFees.Visible = false;
                 txtFees.Visible = false;
                 lblDepartment.Visible = true;
-                txtDepartment.Visible = true;
+                cmbDepartment.Visible = true;
                 groupDocType.Visible = false;
             }
             else
@@ -40,7 +42,7 @@ namespace WindowsFormsApplication1
             {
                 panelRegForm.Visible = true;
                 lblDepartment.Visible = false;
-                txtDepartment.Visible = false;
+                cmbDepartment.Visible = false;
                 lblFees.Visible = false;
                 txtFees.Visible = false;
                 groupDocType.Visible = false;
@@ -50,7 +52,7 @@ namespace WindowsFormsApplication1
             {
                 panelRegForm.Visible = true;
                 lblDepartment.Visible = false;
-                txtDepartment.Visible = false;
+                cmbDepartment.Visible = false;
                 lblFees.Visible = false;
                 txtFees.Visible = false;
                 groupDocType.Visible = false;
@@ -59,7 +61,7 @@ namespace WindowsFormsApplication1
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void DocType_CheckedChanged(object sender, EventArgs e)
@@ -68,7 +70,7 @@ namespace WindowsFormsApplication1
             {
                 panelRegForm.Visible = true;
                 lblDepartment.Visible = true;
-                txtDepartment.Visible = true;
+                cmbDepartment.Visible = true;
                 lblFees.Visible = true;
                 txtFees.Visible = true;
                 lblFees.ResetText();
@@ -79,13 +81,18 @@ namespace WindowsFormsApplication1
                 {
                     panelRegForm.Visible = true;
                     lblDepartment.Visible = true;
-                    txtDepartment.Visible = true;
+                    cmbDepartment.Visible = true;
                     lblFees.Visible = true;
                     txtFees.Visible = true;
                     lblFees.ResetText();
                     lblFees.Text = "Fees Per Patient:";
 
                 }
+        }
+
+        private void EmployeesControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

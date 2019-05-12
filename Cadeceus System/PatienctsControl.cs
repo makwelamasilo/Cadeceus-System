@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void PatienctsControl_Load(object sender, EventArgs e)
+        {
+            txtEntryDate.Text = DateTime.Today.ToShortDateString();
+        }
     }
 }

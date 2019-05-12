@@ -32,6 +32,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatienctsControl));
             this.tabPatients = new System.Windows.Forms.TabControl();
             this.tabAddPatients = new System.Windows.Forms.TabPage();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtEntryDate = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,32 +67,14 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabUpdatePatients = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tabAdmission = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.tabOperations = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelPatientsList = new System.Windows.Forms.Panel();
             this.panelAddPatients = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.tabAdmission = new System.Windows.Forms.TabPage();
-            this.tabOperations = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.tabPatients.SuspendLayout();
             this.tabAddPatients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,6 +109,8 @@
             // 
             this.tabAddPatients.BackColor = System.Drawing.Color.White;
             this.tabAddPatients.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabAddPatients.BackgroundImage")));
+            this.tabAddPatients.Controls.Add(this.maskedTextBox3);
+            this.tabAddPatients.Controls.Add(this.maskedTextBox2);
             this.tabAddPatients.Controls.Add(this.comboBox3);
             this.tabAddPatients.Controls.Add(this.label15);
             this.tabAddPatients.Controls.Add(this.textBox7);
@@ -119,15 +121,13 @@
             this.tabAddPatients.Controls.Add(this.label12);
             this.tabAddPatients.Controls.Add(this.dateTimePicker1);
             this.tabAddPatients.Controls.Add(this.label11);
-            this.tabAddPatients.Controls.Add(this.textBox6);
+            this.tabAddPatients.Controls.Add(this.txtEntryDate);
             this.tabAddPatients.Controls.Add(this.label10);
-            this.tabAddPatients.Controls.Add(this.maskedTextBox2);
             this.tabAddPatients.Controls.Add(this.textBox5);
             this.tabAddPatients.Controls.Add(this.label9);
             this.tabAddPatients.Controls.Add(this.textBox4);
             this.tabAddPatients.Controls.Add(this.label8);
             this.tabAddPatients.Controls.Add(this.label7);
-            this.tabAddPatients.Controls.Add(this.maskedTextBox1);
             this.tabAddPatients.Controls.Add(this.label5);
             this.tabAddPatients.Controls.Add(this.textBox2);
             this.tabAddPatients.Controls.Add(this.textBox1);
@@ -143,6 +143,190 @@
             this.tabAddPatients.Size = new System.Drawing.Size(821, 415);
             this.tabAddPatients.TabIndex = 0;
             this.tabAddPatients.Text = "Add Patients";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Anaesthetics",
+            "Bloodbank",
+            "Cardiology",
+            "Dental",
+            "Emergency",
+            "Gynaecology",
+            "Intensivecareunit(ICU)",
+            "Laboratory",
+            "Morgue",
+            "MRI",
+            "Neurology",
+            "Oncology",
+            "OperationTheatre",
+            "Orthopaedic",
+            "Out-patient",
+            "Pathology"});
+            this.comboBox3.Location = new System.Drawing.Point(617, 234);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(130, 21);
+            this.comboBox3.Sorted = true;
+            this.comboBox3.TabIndex = 28;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(472, 233);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(94, 18);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Department:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(617, 205);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(130, 20);
+            this.textBox7.TabIndex = 26;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(472, 207);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 18);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Diagnosis:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox2.Location = new System.Drawing.Point(617, 178);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(130, 21);
+            this.comboBox2.TabIndex = 24;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(472, 181);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(139, 18);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Docter Refered To:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox1.Location = new System.Drawing.Point(617, 151);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(130, 21);
+            this.comboBox1.TabIndex = 22;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(472, 154);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 18);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Sex";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(617, 125);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(130, 20);
+            this.dateTimePicker1.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(472, 128);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 18);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Date Of Birth:";
+            // 
+            // txtEntryDate
+            // 
+            this.txtEntryDate.Location = new System.Drawing.Point(617, 101);
+            this.txtEntryDate.Name = "txtEntryDate";
+            this.txtEntryDate.Size = new System.Drawing.Size(130, 20);
+            this.txtEntryDate.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(472, 100);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 18);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Entry Date:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(243, 204);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(130, 20);
+            this.textBox5.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(121, 230);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 18);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Postal Code:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(243, 178);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(130, 20);
+            this.textBox4.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(121, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 18);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Street:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(121, 177);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 18);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "City:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(121, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 18);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Phone Number:";
             // 
             // textBox2
             // 
@@ -311,6 +495,35 @@
             this.dataGridView3.Size = new System.Drawing.Size(825, 402);
             this.dataGridView3.TabIndex = 1;
             // 
+            // tabAdmission
+            // 
+            this.tabAdmission.Controls.Add(this.dataGridView4);
+            this.tabAdmission.Location = new System.Drawing.Point(4, 26);
+            this.tabAdmission.Name = "tabAdmission";
+            this.tabAdmission.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdmission.Size = new System.Drawing.Size(821, 415);
+            this.tabAdmission.TabIndex = 4;
+            this.tabAdmission.Text = "Patient Admission";
+            this.tabAdmission.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(809, 403);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // tabOperations
+            // 
+            this.tabOperations.Location = new System.Drawing.Point(4, 26);
+            this.tabOperations.Name = "tabOperations";
+            this.tabOperations.Padding = new System.Windows.Forms.Padding(3);
+            this.tabOperations.Size = new System.Drawing.Size(821, 415);
+            this.tabOperations.TabIndex = 5;
+            this.tabOperations.Text = "Patient Operations";
+            this.tabOperations.UseVisualStyleBackColor = true;
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -336,232 +549,22 @@
             this.panelAddPatients.Size = new System.Drawing.Size(75, 10);
             this.panelAddPatients.TabIndex = 9;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(121, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 18);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Phone Number:";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(243, 153);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(130, 20);
-            this.maskedTextBox1.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(121, 177);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 18);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "City:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(243, 178);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 20);
-            this.textBox4.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(121, 203);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 18);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Street:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(121, 230);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 18);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Postal Code:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(243, 204);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(130, 20);
-            this.textBox5.TabIndex = 15;
-            // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(243, 231);
+            this.maskedTextBox2.Location = new System.Drawing.Point(243, 234);
+            this.maskedTextBox2.Mask = "0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(130, 20);
-            this.maskedTextBox2.TabIndex = 16;
+            this.maskedTextBox2.TabIndex = 29;
+            this.maskedTextBox2.ValidatingType = typeof(int);
             // 
-            // textBox6
+            // maskedTextBox3
             // 
-            this.textBox6.Location = new System.Drawing.Point(617, 101);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 20);
-            this.textBox6.TabIndex = 18;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(472, 100);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 18);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Entry Date:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(472, 128);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 18);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Date Of Birth:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(617, 125);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 20);
-            this.dateTimePicker1.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(472, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 18);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Sex";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.comboBox1.Location = new System.Drawing.Point(617, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
-            this.comboBox1.TabIndex = 22;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(472, 181);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 18);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Docter Refered To:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.comboBox2.Location = new System.Drawing.Point(617, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(130, 21);
-            this.comboBox2.TabIndex = 24;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(617, 205);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(130, 20);
-            this.textBox7.TabIndex = 26;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(472, 207);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 18);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Diagnosis:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(472, 233);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 18);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Department:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Anaesthetics",
-            "Bloodbank",
-            "Cardiology",
-            "Dental",
-            "Emergency",
-            "Gynaecology",
-            "Intensivecareunit(ICU)",
-            "Laboratory",
-            "Morgue",
-            "MRI",
-            "Neurology",
-            "Oncology",
-            "OperationTheatre",
-            "Orthopaedic",
-            "Out-patient",
-            "Pathology"});
-            this.comboBox3.Location = new System.Drawing.Point(617, 234);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(130, 21);
-            this.comboBox3.Sorted = true;
-            this.comboBox3.TabIndex = 28;
-            // 
-            // tabAdmission
-            // 
-            this.tabAdmission.Controls.Add(this.dataGridView4);
-            this.tabAdmission.Location = new System.Drawing.Point(4, 26);
-            this.tabAdmission.Name = "tabAdmission";
-            this.tabAdmission.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdmission.Size = new System.Drawing.Size(821, 415);
-            this.tabAdmission.TabIndex = 4;
-            this.tabAdmission.Text = "Patient Admission";
-            this.tabAdmission.UseVisualStyleBackColor = true;
-            // 
-            // tabOperations
-            // 
-            this.tabOperations.Location = new System.Drawing.Point(4, 26);
-            this.tabOperations.Name = "tabOperations";
-            this.tabOperations.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOperations.Size = new System.Drawing.Size(821, 415);
-            this.tabOperations.TabIndex = 5;
-            this.tabOperations.Text = "Patient Operations";
-            this.tabOperations.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(256, 111);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView4.TabIndex = 0;
+            this.maskedTextBox3.Location = new System.Drawing.Point(243, 152);
+            this.maskedTextBox3.Mask = "(999) 000-0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(130, 20);
+            this.maskedTextBox3.TabIndex = 30;
             // 
             // PatienctsControl
             // 
@@ -573,6 +576,7 @@
             this.Controls.Add(this.panelPatientsList);
             this.Name = "PatienctsControl";
             this.Size = new System.Drawing.Size(835, 454);
+            this.Load += new System.EventHandler(this.PatienctsControl_Load);
             this.tabPatients.ResumeLayout(false);
             this.tabAddPatients.ResumeLayout(false);
             this.tabAddPatients.PerformLayout();
@@ -625,18 +629,18 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtEntryDate;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage tabAdmission;
         private System.Windows.Forms.TabPage tabOperations;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }

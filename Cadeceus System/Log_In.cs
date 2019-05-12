@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
             username = txtUsername.Text;
             password = txtPassword.Text;
 
-            Dashboard dash = new Dashboard();
+            Dashboard dash = new Dashboard(username);
             this.Hide();
             dash.ShowDialog();
         }

@@ -30,43 +30,78 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.panelControls = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerTime = new System.Windows.Forms.Timer(this.components);
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnEmployeeManagement = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnPatientsManagement = new System.Windows.Forms.Button();
             this.btnAppointment = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelTime = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.btnAdmissions = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.panel2.SuspendLayout();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.panelControls = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.panelLeft.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panelLeft.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelControls
+            // timer1
             // 
-            this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControls.Location = new System.Drawing.Point(209, 140);
-            this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(835, 454);
-            this.panelControls.TabIndex = 6;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // timerTime
+            // 
+            this.timerTime.Tick += new System.EventHandler(this.TimerTime_Tick);
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLeft.BackgroundImage")));
+            this.panelLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLeft.Controls.Add(this.btnEmployeeManagement);
+            this.panelLeft.Controls.Add(this.panelSide);
+            this.panelLeft.Controls.Add(this.btnBill);
+            this.panelLeft.Controls.Add(this.btnPatientsManagement);
+            this.panelLeft.Controls.Add(this.btnAppointment);
+            this.panelLeft.Controls.Add(this.btnHome);
+            this.panelLeft.Controls.Add(this.panel3);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(209, 598);
+            this.panelLeft.TabIndex = 8;
+            // 
+            // btnEmployeeManagement
+            // 
+            this.btnEmployeeManagement.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmployeeManagement.FlatAppearance.BorderSize = 0;
+            this.btnEmployeeManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeManagement.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManagement.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployeeManagement.Image")));
+            this.btnEmployeeManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployeeManagement.Location = new System.Drawing.Point(12, 402);
+            this.btnEmployeeManagement.Name = "btnEmployeeManagement";
+            this.btnEmployeeManagement.Size = new System.Drawing.Size(203, 60);
+            this.btnEmployeeManagement.TabIndex = 3;
+            this.btnEmployeeManagement.Text = "Employees Management";
+            this.btnEmployeeManagement.UseVisualStyleBackColor = false;
+            this.btnEmployeeManagement.Click += new System.EventHandler(this.BtnEmployeeManagement_Click);
             // 
             // panelSide
             // 
@@ -92,7 +127,7 @@
             this.btnBill.Text = "     Bills";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBill.UseVisualStyleBackColor = false;
-            this.btnBill.Click += new System.EventHandler(this.BtnBill_Click);
+            this.btnBill.Click += new System.EventHandler(this.BtnBill_Click_1);
             // 
             // btnPatientsManagement
             // 
@@ -106,13 +141,11 @@
             this.btnPatientsManagement.Location = new System.Drawing.Point(12, 271);
             this.btnPatientsManagement.Name = "btnPatientsManagement";
             this.btnPatientsManagement.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPatientsManagement.Size = new System.Drawing.Size(203, 60);
+            this.btnPatientsManagement.Size = new System.Drawing.Size(181, 60);
             this.btnPatientsManagement.TabIndex = 2;
-            this.btnPatientsManagement.Text = "     Patients Management";
-            this.btnPatientsManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPatientsManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPatientsManagement.Text = "Patients  Management";
             this.btnPatientsManagement.UseVisualStyleBackColor = false;
-            this.btnPatientsManagement.Click += new System.EventHandler(this.BtnPatientsManagement_Click);
+            this.btnPatientsManagement.Click += new System.EventHandler(this.BtnPatientsManagement_Click_1);
             // 
             // btnAppointment
             // 
@@ -130,7 +163,7 @@
             this.btnAppointment.Text = "     Appointments";
             this.btnAppointment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAppointment.UseVisualStyleBackColor = false;
-            this.btnAppointment.Click += new System.EventHandler(this.BtnAppointment_Click);
+            this.btnAppointment.Click += new System.EventHandler(this.BtnAppointment_Click_1);
             // 
             // btnHome
             // 
@@ -148,95 +181,18 @@
             this.btnHome.Text = "     Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.labelTime);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(209, 48);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(835, 92);
-            this.panel2.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(166, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 19);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Receptionist";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(110, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 19);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Role:";
-            // 
-            // labelTime
-            // 
-            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTime.AutoSize = true;
-            this.labelTime.BackColor = System.Drawing.Color.Transparent;
-            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(726, 34);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(83, 19);
-            this.labelTime.TabIndex = 0;
-            this.labelTime.Text = "HH:MM:SS";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(165, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Cadeceus";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(69, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome:";
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click_1);
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnMinimize);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(209, 140);
+            this.panel3.Size = new System.Drawing.Size(209, 134);
             this.panel3.TabIndex = 0;
             // 
             // btnMinimize
@@ -255,7 +211,7 @@
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click_1);
             // 
             // label2
             // 
@@ -267,7 +223,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Cadeceous Group";
+            this.label2.Text = "Code Exircutioners";
             // 
             // pictureBox1
             // 
@@ -280,34 +236,63 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btnClose
+            // lblRole
             // 
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(788, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(47, 48);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.Button9_Click);
+            this.lblRole.AutoSize = true;
+            this.lblRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblRole.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.Color.White;
+            this.lblRole.Location = new System.Drawing.Point(166, 50);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(42, 19);
+            this.lblRole.TabIndex = 0;
+            this.lblRole.Text = "Role";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(110, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 19);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Role:";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(165, 19);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(89, 19);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Cadeceus";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(69, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome:";
             // 
             // panel4
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.btnClose);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(209, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(835, 48);
-            this.panel4.TabIndex = 3;
+            this.panel4.Size = new System.Drawing.Size(855, 50);
+            this.panel4.TabIndex = 7;
             // 
             // label3
             // 
@@ -321,99 +306,109 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Hospital Management System";
             // 
-            // panelLeft
+            // btnClose
             // 
-            this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLeft.BackgroundImage")));
-            this.panelLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLeft.Controls.Add(this.btnAdmissions);
-            this.panelLeft.Controls.Add(this.panelSide);
-            this.panelLeft.Controls.Add(this.btnBill);
-            this.panelLeft.Controls.Add(this.btnPatientsManagement);
-            this.panelLeft.Controls.Add(this.btnAppointment);
-            this.panelLeft.Controls.Add(this.btnHome);
-            this.panelLeft.Controls.Add(this.panel3);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(209, 594);
-            this.panelLeft.TabIndex = 4;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(808, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(47, 50);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // btnAdmissions
+            // panelControls
             // 
-            this.btnAdmissions.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdmissions.FlatAppearance.BorderSize = 0;
-            this.btnAdmissions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmissions.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmissions.ForeColor = System.Drawing.Color.White;
-            this.btnAdmissions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmissions.Image")));
-            this.btnAdmissions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmissions.Location = new System.Drawing.Point(12, 402);
-            this.btnAdmissions.Name = "btnAdmissions";
-            this.btnAdmissions.Size = new System.Drawing.Size(203, 60);
-            this.btnAdmissions.TabIndex = 3;
-            this.btnAdmissions.Text = "           Employees Management";
-            this.btnAdmissions.UseVisualStyleBackColor = false;
-            this.btnAdmissions.Click += new System.EventHandler(this.BtnAdmissions_Click);
+            this.panelControls.Location = new System.Drawing.Point(209, 132);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(855, 466);
+            this.panelControls.TabIndex = 10;
             // 
-            // timer1
+            // panel2
             // 
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.lblRole);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.labelTime);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(209, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(855, 86);
+            this.panel2.TabIndex = 9;
             // 
-            // timerTime
+            // labelTime
             // 
-            this.timerTime.Tick += new System.EventHandler(this.TimerTime_Tick);
+            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTime.AutoSize = true;
+            this.labelTime.BackColor = System.Drawing.Color.Transparent;
+            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.ForeColor = System.Drawing.Color.LimeGreen;
+            this.labelTime.Location = new System.Drawing.Point(733, 28);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(83, 19);
+            this.labelTime.TabIndex = 0;
+            this.labelTime.Text = "HH:MM:SS";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 594);
-            this.Controls.Add(this.panelControls);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
+            this.ClientSize = new System.Drawing.Size(1064, 598);
             this.Controls.Add(this.panelLeft);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelControls);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.panelLeft.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panelLeft.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerTime;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Button btnEmployeeManagement;
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnPatientsManagement;
         private System.Windows.Forms.Button btnAppointment;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAdmissions;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelTime;
     }
 }
