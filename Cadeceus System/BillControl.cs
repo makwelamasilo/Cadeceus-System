@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
 
         private void BtnPrintBill_Click(object sender, EventArgs e)
         {
-            string filename = txtAttachment.Text;
+            /*string filename = txtAttachment.Text;
             reader = new StreamReader(filename);
             Verdanna10font = new Font("Verdanna", 10);
             PrintDocument pd = new PrintDocument();
@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             if(reader!=null)
             {
                 reader.Close();
-            }
+            }*/
 
 
         }
@@ -69,30 +69,8 @@ namespace WindowsFormsApplication1
 
         private void BtnEmail_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MailMessage mail = new MailMessage();
-
-
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("Cadeceusdelivery@gmail.com");
-                mail.CC.Add(txtCC.Text);
-                mail.To.Add(txtTo.Text);
-                mail.Subject = txtSubject.Text;
-                mail.Body = txtBody.Text;
-                mail.Attachments.Add(new Attachment(txtAttachment.Text));
-
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("Cadeceusdelivery@gmail.com", "CadDelivery");
-                SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(mail);
-                MessageBox.Show("Email Sent");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            Email mail = new Email();
+            AddControlsToPanel(mail);
 
         }
 
@@ -108,12 +86,44 @@ namespace WindowsFormsApplication1
 
         private void BtnAttachment_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            if (dlg.ShowDialog() == DialogResult.OK)
+            
+        }
+
+        private void AddControlsToPanel(Control e)
+        {
+            e.Dock = DockStyle.Fill;
+            panelView.Controls.Clear();
+            panelView.Controls.Add(e);
+        }
+
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            string doctorName = cmbDoctor.Text;
+            string patient = txtPatientID.Text;
+            string meds = cmbMedication.Text;
+            double cost = 0;
+            if(cmbMedication.SelectedIndex == 0)
             {
-                string path = dlg.FileName.ToString();
-                txtAttachment.Text = path;
+                cost = 50;
             }
+
+            StreamWriter mywriter = new StreamWriter("C:\\Users\\sumes\\OneDrive\\Documents\\2019\\ITRW311\\Cadecues System\\bills");
+
+            try
+            {
+                mywriter.WriteLine("Patient: " + patient + "\n" + "Doctor: " + doctorName + "\n" + "Medication: " + meds + "R" + cost);
+                MessageBox.Show("Bill Successfully created");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BtnViewBill_Click(object sender, EventArgs e)
+        {
+            Bill mybill = new Bill();
+            AddControlsToPanel(mybill);
         }
     }
 }

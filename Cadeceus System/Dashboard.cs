@@ -74,10 +74,36 @@ namespace WindowsFormsApplication1
         private void Dashboard_Load(object sender, EventArgs e)
         {
             lblWelcome.Text = user;
-            if (user.Substring(0,3) == "Pat")
+            if (user.Substring(0,1) == "1")
             {
                 btnEmployeeManagement.Enabled = false;
-                lblRole.Text = "Patient";
+                lblRole.Text = "Receptionist";
+            }
+            else
+                if (user.Substring(0, 1) == "2")
+            {
+                btnEmployeeManagement.Enabled = true;
+                lblRole.Text = "Doctor";
+            }
+            else
+                if (user.Substring(0, 1) == "3")
+            {
+                btnEmployeeManagement.Enabled = false;
+                lblRole.Text = "Patients";
+            }
+            else
+                if (user.Substring(0, 1) == "4")
+            {
+                btnEmployeeManagement.Enabled = false;
+                lblRole.Text = "Administrator";
+            }
+            else
+                if (user.Substring(0, 1) == "5")
+            {
+                btnEmployeeManagement.Enabled = false;
+                btnBill.Enabled = false;
+                btnAppointment.Enabled = false;
+                lblRole.Text = "Nurse";
             }
         }
 

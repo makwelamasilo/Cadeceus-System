@@ -83,6 +83,12 @@
     <Compile Include="AppointmentControl.Designer.cs">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="DashControl.Designer.cs">
       <DependentUpon>DashControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeesControl.cs">
       <SubType>UserControl</SubType>
@@ -183,6 +195,9 @@
     <EmbeddedResource Include="AppointmentControl.resx">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillControl.resx">
       <DependentUpon>BillControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashControl.resx">
       <DependentUpon>DashControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesControl.resx">
       <DependentUpon>EmployeesControl.cs</DependentUpon>
